@@ -1,15 +1,9 @@
 package net.petriv.jdbc;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public final class JdbcUtils {
     private static boolean initialized;
-
-    public JdbcUtils() {
-    }
 
     public static synchronized void initDriver(String driverClass) {
         if (!initialized) {

@@ -10,21 +10,27 @@ import java.util.Set;
 public class Test1 {
     public static void main(String[] args) throws SQLException {
 
-        DeveloperDaoJdbc dao = new DeveloperDaoJdbc();
+        DeveloperDao dao = new DeveloperDao();
         Developer dev = new Developer();
 
-        Skill skill = new Skill(1, "Frontend");
+        Skill skill = new Skill();
+        skill.setId(1);
         Set<Skill> set = new HashSet();
         set.add(skill);
 
-        dev.setId(2);
-        dev.setFirstName("Mike");
-        dev.setLastName("Thomson");
-        dev.setSpecialty("JavaScript");
-        dev.setExperience(2);
-        dev.setSalary(2000);
+        dev.setId(3);
+        dev.setFirstName("Jony");
+        dev.setLastName("Peterson");
+        dev.setSpecialty("C#");
+        dev.setExperience(6);
+        dev.setSalary(6000);
         dev.setSkills(set);
-        dao.save(dev);
-        System.out.println(dao.getAll());
+        //dao.delete(1);
+       //dao.save(dev);
+       System.out.println(dao.getById(3));
+       // System.out.println(dao.getAll());
+
+
+       // DBConnection.getConnection();
     }
 }

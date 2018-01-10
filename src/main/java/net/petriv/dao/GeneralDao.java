@@ -3,7 +3,7 @@ package net.petriv.dao;
 import java.sql.SQLException;
 import java.util.List;
 
-public interface GeneralDAO<T> {
+public interface GeneralDao<T> {
 
     void save(T v) throws SQLException;
 

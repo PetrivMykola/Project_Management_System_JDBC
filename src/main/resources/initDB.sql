@@ -1,0 +1,23 @@
+CREATE TABLE Developers (
+id         INTEGER PRIMARY KEY NOT NULL,
+FirstName  VARCHAR(45)     NOT NULL,
+LastName   VARCHAR(45)     NOT NULL,
+Specialty  VARCHAR(45)     NOT NULL,
+Experience INTEGER         NOT NULL,
+Salary     INTEGER         NOT NULL
+);
+
+CREATE TABLE Skills (
+id INTEGER PRIMARY KEY NOT NULL,
+Name VARCHAR(45) NOT NULL
+);
+
+CREATE TABLE DeveloperSkill (
+DevId INTEGER NOT NULL PRIMARY KEY,
+SkillId INTEGER NOT NULL PRIMARY KEY,
+FOREIGN KEY (DevId) REFERENCES Developers(id)
+FOREIGN KEY(killid) REFERENCES Skills(id)
+);
+
+
+

@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2c5a7e8-e0c9-4f44-87a1-bc77a2f7f424" name="Default" comment="" />
+    <list default="true" id="e2c5a7e8-e0c9-4f44-87a1-bc77a2f7f424" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/petriv/jdbc/DBConnection.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/initDB.sql" afterPath="$PROJECT_DIR$/src/main/resources/initDB.sql" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/populateDB.sql" afterPath="$PROJECT_DIR$/src/main/resources/populateDB.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/net/petriv/dao/DeveloperDaoJdbc.class" afterPath="$PROJECT_DIR$/target/classes/net/petriv/dao/DeveloperDaoJdbc.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/net/petriv/dao/Test1.class" afterPath="$PROJECT_DIR$/target/classes/net/petriv/dao/Test1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/net/petriv/jdbc/JdbcUtils.class" afterPath="$PROJECT_DIR$/target/classes/net/petriv/jdbc/JdbcUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/net/petriv/model/Developer.class" afterPath="$PROJECT_DIR$/target/classes/net/petriv/model/Developer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/petriv/dao/DeveloperDaoJdbc.java" afterPath="$PROJECT_DIR$/src/main/java/net/petriv/dao/DeveloperDaoJdbc.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/petriv/dao/Test1.java" afterPath="$PROJECT_DIR$/src/main/java/net/petriv/dao/Test1.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/petriv/jdbc/JdbcUtils.java" afterPath="$PROJECT_DIR$/src/main/java/net/petriv/jdbc/JdbcUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/petriv/model/Developer.java" afterPath="$PROJECT_DIR$/src/main/java/net/petriv/model/Developer.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,25 +27,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="14" column="39" lean-forward="false" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Developer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/model/Developer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1425">
-              <caret line="79" column="27" lean-forward="false" selection-start-line="79" selection-start-column="27" selection-end-line="79" selection-end-column="27" />
-              <folding>
-                <element signature="e#998#999#0" expanded="true" />
-                <element signature="e#1034#1035#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="300">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -39,31 +40,74 @@
       <file leaf-file-name="DeveloperDaoJdbc.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/dao/DeveloperDaoJdbc.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="195" column="17" lean-forward="false" selection-start-line="195" selection-start-column="17" selection-end-line="195" selection-end-column="17" />
+            <state relative-caret-position="275">
+              <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3267#3278#0" expanded="true" />
-                <marker date="1515436283135" expanded="true" signature="1062:1196" ph=" INSERT statement (DEVELOPERS)" />
-                <marker date="1515436283135" expanded="true" signature="2442:2477" ph=" SELECT statement (DEVELOPERS)" />
-                <marker date="1515436283135" expanded="true" signature="2442:2478" ph=" SELECT statement (DEVELOPERS)" />
-                <marker date="1515436283135" expanded="true" signature="2442:2479" ph=" SELECT statement (DEVELOPERS)" />
-                <marker date="1515436283135" expanded="true" signature="3632:3655" ph=" SELECT statement (DEVELOPER)" />
-                <marker date="1515436283135" expanded="true" signature="3632:3656" ph=" SELECT statement (DEVELOPERS)" />
-                <marker date="1515436283135" expanded="true" signature="4517:4552" ph=" DELETE statement (DEVELOPER)" />
-                <marker date="1515436283135" expanded="true" signature="5170:5222" ph=" UPDATE statement (DEVELOPERS)" />
-                <marker date="1515436283135" expanded="true" signature="5170:5313" ph=" UPDATE statement (DEVELOPERS)" />
-                <marker date="1515436283135" expanded="true" signature="6695:6733" ph=" SELECT statement (DEVELOPERS)" />
-                <marker date="1515436283135" expanded="true" signature="6695:6755" ph=" SELECT statement (DEVELOPERSJOIN)" />
-                <marker date="1515436283135" expanded="true" signature="6695:6865" ph=" SELECT statement (DEVELOPER_SKILLS, SKILLS, DEVELOPERS)" />
-                <marker date="1515436283135" expanded="true" signature="7785:7940" ph=" INSERT statement (DEVELOPER_SKILLS)" />
+                <marker date="1515549964031" expanded="true" signature="553:687" ph=" INSERT statement (DEVELOPERS)" />
+                <marker date="1515549964031" expanded="true" signature="1777:1812" ph=" SELECT statement (DEVELOPERS)" />
+                <marker date="1515549964031" expanded="true" signature="1777:1813" ph=" SELECT statement (DEVELOPERS)" />
+                <marker date="1515549964031" expanded="true" signature="1777:1814" ph=" SELECT statement (DEVELOPERS)" />
+                <marker date="1515549964031" expanded="true" signature="2787:2810" ph=" SELECT statement (DEVELOPER)" />
+                <marker date="1515549964031" expanded="true" signature="2787:2811" ph=" SELECT statement (DEVELOPERS)" />
+                <marker date="1515549964031" expanded="true" signature="3572:3624" ph=" DELETE statement (DEVELOPER_SKILLS)" />
+                <marker date="1515549964031" expanded="true" signature="3757:3794" ph=" DELETE statement (DEVELOPERS)" />
+                <marker date="1515549964031" expanded="true" signature="4312:4364" ph=" UPDATE statement (DEVELOPERS)" />
+                <marker date="1515549964031" expanded="true" signature="4312:4455" ph=" UPDATE statement (DEVELOPERS)" />
+                <marker date="1515549964031" expanded="true" signature="5749:5787" ph=" SELECT statement (DEVELOPERS)" />
+                <marker date="1515549964031" expanded="true" signature="5749:5809" ph=" SELECT statement (DEVELOPERSJOIN)" />
+                <marker date="1515549964031" expanded="true" signature="5749:5919" ph=" SELECT statement (DEVELOPER_SKILLS, SKILLS, DEVELOPERS)" />
+                <marker date="1515549964031" expanded="true" signature="6817:6908" ph=" INSERT statement (DEVELOPER_SKILLS)" />
+                <marker date="1515549964031" expanded="true" signature="6908:7132" ph=" INSERT statement (DEVELOPER_SKILLS)" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="50">
+              <caret line="2" column="14" lean-forward="false" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DBConnection.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/jdbc/DBConnection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DriverManager.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_141/src.zip!/java/sql/DriverManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5100">
+              <caret line="235" column="29" lean-forward="false" selection-start-line="235" selection-start-column="29" selection-end-line="235" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Properties.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_141/src.zip!/java/util/Properties.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23150">
+              <caret line="967" column="18" lean-forward="false" selection-start-line="967" selection-start-column="18" selection-end-line="967" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="initDB.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/initDB.sql">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/initDB.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -72,21 +116,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="populateDB.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/populateDB.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Test1.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/dao/Test1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="15" column="45" lean-forward="false" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+            <state relative-caret-position="595">
+              <caret line="35" column="9" lean-forward="false" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -97,20 +131,8 @@
       <file leaf-file-name="JdbcUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/jdbc/JdbcUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="750">
-              <caret line="30" column="21" lean-forward="false" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PreparedStatement.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_141/src.zip!/java/sql/PreparedStatement.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="94" column="8" lean-forward="false" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="8" />
+            <state relative-caret-position="250">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -126,18 +148,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GeneralDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/dao/GeneralDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="15" column="41" lean-forward="false" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -146,6 +156,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -162,19 +175,24 @@
         <option value="$PROJECT_DIR$/src/main/java/net/petriv/dao/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/petriv/Test.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/populateDB.sql" />
         <option value="$PROJECT_DIR$/src/main/java/net/petriv/jdbc/JdbcUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/petriv/model/Developer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/petriv/dao/DeveloperDaoJdbc.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/petriv/jdbc/Settings.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/net/petriv/dao/Test1.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/petriv/jdbc/DBConnection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/petriv/dao/DeveloperDaoJdbc.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="574" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="615" />
     <option name="y" value="37" />
     <option name="width" value="976" />
     <option name="height" value="1038" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -190,8 +208,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -252,24 +271,50 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="net" type="462c0819:PsiDirectoryNode" />
               <item name="petriv" type="462c0819:PsiDirectoryNode" />
+              <item name="jdbc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjectManagementSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjectManagementSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="net" type="462c0819:PsiDirectoryNode" />
+              <item name="petriv" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjectManagementSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjectManagementSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ConsoleApp" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="ignore_missing_gitignore" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\ProjectProselyte\task\ProjectManagementSystem\src\main\java\net\petriv\jdbc" />
+      <recent name="C:\ProjectProselyte\task\ProjectManagementSystem\src\main\java\net\petriv" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\ProjectProselyte\task\ProjectManagementSystem\src\main\resources" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -449,37 +494,38 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="574" y="37" width="976" height="1038" extended-state="0" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33599088" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3329493" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33940774" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44777778" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22395274" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997722" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Code Iris" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32801822" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -495,19 +541,19 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997722" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3997722" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Code Iris" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32801822" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33599088" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20730397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33940774" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2207304" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -518,19 +564,155 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/net/petriv/dao/Test1.java</url>
-          <line>26</line>
-          <properties />
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="6" />
+      <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/jdbc/DBConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="26" column="12" lean-forward="false" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_141/src.zip!/java/util/Properties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24175">
+          <caret line="967" column="18" lean-forward="false" selection-start-line="967" selection-start-column="18" selection-end-line="967" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/initDB.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/jdbc/JdbcUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/model/Skill.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/dao/Test1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/model/Developer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/dao/DeveloperDaoJdbc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1375">
+          <caret line="55" column="12" lean-forward="false" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1515549964031" expanded="true" signature="553:687" ph=" INSERT statement (DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="1777:1812" ph=" SELECT statement (DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="1777:1813" ph=" SELECT statement (DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="1777:1814" ph=" SELECT statement (DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="2787:2810" ph=" SELECT statement (DEVELOPER)" />
+            <marker date="1515549964031" expanded="true" signature="2787:2811" ph=" SELECT statement (DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="3572:3624" ph=" DELETE statement (DEVELOPER_SKILLS)" />
+            <marker date="1515549964031" expanded="true" signature="3757:3794" ph=" DELETE statement (DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="4312:4364" ph=" UPDATE statement (DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="4312:4455" ph=" UPDATE statement (DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="5749:5787" ph=" SELECT statement (DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="5749:5809" ph=" SELECT statement (DEVELOPERSJOIN)" />
+            <marker date="1515549964031" expanded="true" signature="5749:5919" ph=" SELECT statement (DEVELOPER_SKILLS, SKILLS, DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="6817:6908" ph=" INSERT statement (DEVELOPER_SKILLS)" />
+            <marker date="1515549964031" expanded="true" signature="6908:7132" ph=" INSERT statement (DEVELOPER_SKILLS)" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="14" lean-forward="false" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/jdbc/DBConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="18" column="92" lean-forward="false" selection-start-line="18" selection-start-column="92" selection-end-line="18" selection-end-column="92" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/initDB.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/populateDB.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/jdbc/JdbcUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/model/Skill.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/dao/Test1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="17" column="22" lean-forward="false" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -543,10 +725,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1100">
           <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding>
-            <element signature="e#998#999#0" expanded="true" />
-            <element signature="e#1034#1035#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -556,20 +735,21 @@
           <caret line="63" column="30" lean-forward="false" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3267#3278#0" expanded="true" />
-            <marker date="1515436283135" expanded="true" signature="1062:1196" ph=" INSERT statement (DEVELOPERS)" />
-            <marker date="1515436283135" expanded="true" signature="2442:2477" ph=" SELECT statement (DEVELOPERS)" />
-            <marker date="1515436283135" expanded="true" signature="2442:2478" ph=" SELECT statement (DEVELOPERS)" />
-            <marker date="1515436283135" expanded="true" signature="2442:2479" ph=" SELECT statement (DEVELOPERS)" />
-            <marker date="1515436283135" expanded="true" signature="3632:3655" ph=" SELECT statement (DEVELOPER)" />
-            <marker date="1515436283135" expanded="true" signature="3632:3656" ph=" SELECT statement (DEVELOPERS)" />
-            <marker date="1515436283135" expanded="true" signature="4517:4552" ph=" DELETE statement (DEVELOPER)" />
-            <marker date="1515436283135" expanded="true" signature="5170:5222" ph=" UPDATE statement (DEVELOPERS)" />
-            <marker date="1515436283135" expanded="true" signature="5170:5313" ph=" UPDATE statement (DEVELOPERS)" />
-            <marker date="1515436283135" expanded="true" signature="6695:6733" ph=" SELECT statement (DEVELOPERS)" />
-            <marker date="1515436283135" expanded="true" signature="6695:6755" ph=" SELECT statement (DEVELOPERSJOIN)" />
-            <marker date="1515436283135" expanded="true" signature="6695:6865" ph=" SELECT statement (DEVELOPER_SKILLS, SKILLS, DEVELOPERS)" />
-            <marker date="1515436283135" expanded="true" signature="7785:7940" ph=" INSERT statement (DEVELOPER_SKILLS)" />
+            <marker date="1515549964031" expanded="true" signature="553:687" ph=" INSERT statement (DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="1777:1812" ph=" SELECT statement (DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="1777:1813" ph=" SELECT statement (DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="1777:1814" ph=" SELECT statement (DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="2787:2810" ph=" SELECT statement (DEVELOPER)" />
+            <marker date="1515549964031" expanded="true" signature="2787:2811" ph=" SELECT statement (DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="3572:3624" ph=" DELETE statement (DEVELOPER_SKILLS)" />
+            <marker date="1515549964031" expanded="true" signature="3757:3794" ph=" DELETE statement (DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="4312:4364" ph=" UPDATE statement (DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="4312:4455" ph=" UPDATE statement (DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="5749:5787" ph=" SELECT statement (DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="5749:5809" ph=" SELECT statement (DEVELOPERSJOIN)" />
+            <marker date="1515549964031" expanded="true" signature="5749:5919" ph=" SELECT statement (DEVELOPER_SKILLS, SKILLS, DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="6817:6908" ph=" INSERT statement (DEVELOPER_SKILLS)" />
+            <marker date="1515549964031" expanded="true" signature="6908:7132" ph=" INSERT statement (DEVELOPER_SKILLS)" />
           </folding>
         </state>
       </provider>
@@ -584,14 +764,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/jdbc/ConnectionFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="10" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/jdbc/ConnectionFactory.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/model/Skill.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -604,9 +777,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
           <caret line="15" column="41" lean-forward="false" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -614,7 +784,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4600">
           <caret line="207" column="0" lean-forward="false" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -630,21 +799,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1100">
           <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding>
-            <element signature="e#998#999#0" expanded="true" />
-            <element signature="e#1034#1035#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/jdbc/ConnectionFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/jdbc/ConnectionFactory.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/model/Skill.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -657,9 +816,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
           <caret line="15" column="41" lean-forward="false" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -669,35 +825,26 @@
           <caret line="33" column="29" lean-forward="true" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3267#3278#0" expanded="true" />
-            <marker date="1515436283135" expanded="true" signature="1062:1196" ph=" INSERT statement (DEVELOPERS)" />
-            <marker date="1515436283135" expanded="true" signature="2442:2477" ph=" SELECT statement (DEVELOPERS)" />
-            <marker date="1515436283135" expanded="true" signature="2442:2478" ph=" SELECT statement (DEVELOPERS)" />
-            <marker date="1515436283135" expanded="true" signature="2442:2479" ph=" SELECT statement (DEVELOPERS)" />
-            <marker date="1515436283135" expanded="true" signature="3632:3655" ph=" SELECT statement (DEVELOPER)" />
-            <marker date="1515436283135" expanded="true" signature="3632:3656" ph=" SELECT statement (DEVELOPERS)" />
-            <marker date="1515436283135" expanded="true" signature="4517:4552" ph=" DELETE statement (DEVELOPER)" />
-            <marker date="1515436283135" expanded="true" signature="5170:5222" ph=" UPDATE statement (DEVELOPERS)" />
-            <marker date="1515436283135" expanded="true" signature="5170:5313" ph=" UPDATE statement (DEVELOPERS)" />
-            <marker date="1515436283135" expanded="true" signature="6695:6733" ph=" SELECT statement (DEVELOPERS)" />
-            <marker date="1515436283135" expanded="true" signature="6695:6755" ph=" SELECT statement (DEVELOPERSJOIN)" />
-            <marker date="1515436283135" expanded="true" signature="6695:6865" ph=" SELECT statement (DEVELOPER_SKILLS, SKILLS, DEVELOPERS)" />
-            <marker date="1515436283135" expanded="true" signature="7785:7940" ph=" INSERT statement (DEVELOPER_SKILLS)" />
+            <marker date="1515549964031" expanded="true" signature="553:687" ph=" INSERT statement (DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="1777:1812" ph=" SELECT statement (DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="1777:1813" ph=" SELECT statement (DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="1777:1814" ph=" SELECT statement (DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="2787:2810" ph=" SELECT statement (DEVELOPER)" />
+            <marker date="1515549964031" expanded="true" signature="2787:2811" ph=" SELECT statement (DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="3572:3624" ph=" DELETE statement (DEVELOPER_SKILLS)" />
+            <marker date="1515549964031" expanded="true" signature="3757:3794" ph=" DELETE statement (DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="4312:4364" ph=" UPDATE statement (DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="4312:4455" ph=" UPDATE statement (DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="5749:5787" ph=" SELECT statement (DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="5749:5809" ph=" SELECT statement (DEVELOPERSJOIN)" />
+            <marker date="1515549964031" expanded="true" signature="5749:5919" ph=" SELECT statement (DEVELOPER_SKILLS, SKILLS, DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="6817:6908" ph=" INSERT statement (DEVELOPER_SKILLS)" />
+            <marker date="1515549964031" expanded="true" signature="6908:7132" ph=" INSERT statement (DEVELOPER_SKILLS)" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/dao/DeveloperDAO.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/dao/GeneralDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="15" column="41" lean-forward="false" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_141/src.zip!/java/sql/Connection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2894">
@@ -706,20 +853,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/jdbc/ConnectionFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="10" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/jdbc/ConnectionFactory.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/Test.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/6.0.6/mysql-connector-java-6.0.6.jar!/com/mysql/cj/jdbc/exceptions/SQLError.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="207" column="0" lean-forward="false" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -727,32 +866,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
           <caret line="14" column="39" lean-forward="false" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/model/Skill.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/jdbc/JdbcUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="30" column="21" lean-forward="false" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/initDB.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -765,53 +878,118 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/populateDB.sql">
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/dao/GeneralDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="15" column="41" lean-forward="false" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/populateDB.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/initDB.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/model/Skill.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/jdbc/Settings.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/application.properties" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/jdbc/application.properties" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_141/src.zip!/java/util/Properties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23150">
+          <caret line="967" column="18" lean-forward="false" selection-start-line="967" selection-start-column="18" selection-end-line="967" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/jdbc/JdbcUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
-          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_141/src.zip!/java/sql/DriverManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5100">
+          <caret line="235" column="29" lean-forward="false" selection-start-line="235" selection-start-column="29" selection-end-line="235" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/model/Developer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="79" column="27" lean-forward="false" selection-start-line="79" selection-start-column="27" selection-end-line="79" selection-end-column="27" />
+        <state relative-caret-position="300">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="14" lean-forward="false" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/jdbc/DBConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
           <folding>
-            <element signature="e#998#999#0" expanded="true" />
-            <element signature="e#1034#1035#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/dao/DeveloperDaoJdbc.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="195" column="17" lean-forward="false" selection-start-line="195" selection-start-column="17" selection-end-line="195" selection-end-column="17" />
+        <state relative-caret-position="275">
+          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3267#3278#0" expanded="true" />
-            <marker date="1515436283135" expanded="true" signature="1062:1196" ph=" INSERT statement (DEVELOPERS)" />
-            <marker date="1515436283135" expanded="true" signature="2442:2477" ph=" SELECT statement (DEVELOPERS)" />
-            <marker date="1515436283135" expanded="true" signature="2442:2478" ph=" SELECT statement (DEVELOPERS)" />
-            <marker date="1515436283135" expanded="true" signature="2442:2479" ph=" SELECT statement (DEVELOPERS)" />
-            <marker date="1515436283135" expanded="true" signature="3632:3655" ph=" SELECT statement (DEVELOPER)" />
-            <marker date="1515436283135" expanded="true" signature="3632:3656" ph=" SELECT statement (DEVELOPERS)" />
-            <marker date="1515436283135" expanded="true" signature="4517:4552" ph=" DELETE statement (DEVELOPER)" />
-            <marker date="1515436283135" expanded="true" signature="5170:5222" ph=" UPDATE statement (DEVELOPERS)" />
-            <marker date="1515436283135" expanded="true" signature="5170:5313" ph=" UPDATE statement (DEVELOPERS)" />
-            <marker date="1515436283135" expanded="true" signature="6695:6733" ph=" SELECT statement (DEVELOPERS)" />
-            <marker date="1515436283135" expanded="true" signature="6695:6755" ph=" SELECT statement (DEVELOPERSJOIN)" />
-            <marker date="1515436283135" expanded="true" signature="6695:6865" ph=" SELECT statement (DEVELOPER_SKILLS, SKILLS, DEVELOPERS)" />
-            <marker date="1515436283135" expanded="true" signature="7785:7940" ph=" INSERT statement (DEVELOPER_SKILLS)" />
+            <marker date="1515549964031" expanded="true" signature="553:687" ph=" INSERT statement (DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="1777:1812" ph=" SELECT statement (DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="1777:1813" ph=" SELECT statement (DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="1777:1814" ph=" SELECT statement (DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="2787:2810" ph=" SELECT statement (DEVELOPER)" />
+            <marker date="1515549964031" expanded="true" signature="2787:2811" ph=" SELECT statement (DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="3572:3624" ph=" DELETE statement (DEVELOPER_SKILLS)" />
+            <marker date="1515549964031" expanded="true" signature="3757:3794" ph=" DELETE statement (DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="4312:4364" ph=" UPDATE statement (DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="4312:4455" ph=" UPDATE statement (DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="5749:5787" ph=" SELECT statement (DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="5749:5809" ph=" SELECT statement (DEVELOPERSJOIN)" />
+            <marker date="1515549964031" expanded="true" signature="5749:5919" ph=" SELECT statement (DEVELOPER_SKILLS, SKILLS, DEVELOPERS)" />
+            <marker date="1515549964031" expanded="true" signature="6817:6908" ph=" INSERT statement (DEVELOPER_SKILLS)" />
+            <marker date="1515549964031" expanded="true" signature="6908:7132" ph=" INSERT statement (DEVELOPER_SKILLS)" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/petriv/dao/Test1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="15" column="45" lean-forward="false" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+        <state relative-caret-position="595">
+          <caret line="35" column="9" lean-forward="false" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

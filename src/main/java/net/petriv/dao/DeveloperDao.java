@@ -1,5 +1,6 @@
 package net.petriv.dao;
 
+import net.petriv.jdbc.DBConnection;
 import net.petriv.jdbc.JdbcUtils;
 import net.petriv.model.Developer;
 import net.petriv.model.Skill;
@@ -7,28 +8,13 @@ import net.petriv.model.Skill;
 import java.sql.*;
 import java.util.*;
 
-public class DeveloperDaoJdbc implements GeneralDAO<Developer> {
-    static final String DATABASE_URL = "jdbc:mysql://localhost/project_management_system";
-    static final String USER = "root";
-    static final String PASSWORD = "123456789";
-
-    public DeveloperDaoJdbc() { }
-
-    static {
-        JdbcUtils.initDriver("com.mysql.jdbc.Driver");
-    }
-
-    private Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(DATABASE_URL, USER, PASSWORD);
-    }
+public class DeveloperDao implements GeneralDao<Developer> {
 
     public void save(Developer dev) throws SQLException {
-        Connection connection = getConnection();
+        Connection connection = DBConnection.getConnection();
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
         try {
-            connection.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);
-            connection.setAutoCommit(false);
             preparedStatement = connection.prepareStatement("INSERT INTO developers (id, first_name, last_name, specialty, experience, salary)\n" +
                     "VALUES (?, ?, ?, ?, ?, ?);");
             preparedStatement.setInt(1, dev.getId());
@@ -38,11 +24,10 @@ public class DeveloperDaoJdbc implements GeneralDAO<Developer> {
             preparedStatement.setInt(5, dev.getExperience());
             preparedStatement.setInt(6, dev.getSalary());
             preparedStatement.executeUpdate();
-            connection.commit();
-            skillsForDev(dev.getSkills(), dev, connection);
-            connection.commit();
+            skillsForDev(dev, connection);
         } catch (SQLException e) {
             JdbcUtils.rollbackQuietly(connection);
+            throw  new RuntimeException(e);
         } finally {
             JdbcUtils.closeQuietly(resultSet);
             JdbcUtils.closeQuietly(preparedStatement);
@@ -51,13 +36,11 @@ public class DeveloperDaoJdbc implements GeneralDAO<Developer> {
     }
 
     public Developer getById(int id) throws SQLException {
-        Connection connection = getConnection();
+        Connection connection = DBConnection.getConnection();
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
         Developer dev = null;
         try {
-            connection.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);
-            connection.setAutoCommit(false);
             preparedStatement = connection.prepareStatement("SELECT * FROM developers WHERE ID = ? ");
             preparedStatement.setInt(1, id);
             resultSet = preparedStatement.executeQuery();
@@ -65,12 +48,7 @@ public class DeveloperDaoJdbc implements GeneralDAO<Developer> {
             if (resultSet.next()) {
                 dev = extractDeveloperFromResultSet(resultSet);
             }
-
-
-           dev = extractSkillsDeveloper(connection, id, dev);
-            connection.commit();
-            System.out.println(dev);
-
+            dev = extractSkillsDeveloper(connection, id, dev);
             return dev;
 
         } catch (SQLException e) {
@@ -85,13 +63,11 @@ public class DeveloperDaoJdbc implements GeneralDAO<Developer> {
 
     public List<Developer> getAll() throws SQLException {
         List<Developer> developerList = new ArrayList<Developer>();
-        Connection conn = getConnection();
+        Connection conn = DBConnection.getConnection();
         Statement stmt = null;
         ResultSet rs = null;
         Developer developer = null;
         try {
-            conn.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);
-            conn.setAutoCommit(false);
             stmt = conn.createStatement();
             rs = stmt.executeQuery("SELECT * FROM developers");
             while (rs.next()) {
@@ -112,12 +88,14 @@ public class DeveloperDaoJdbc implements GeneralDAO<Developer> {
     }
 
     public void delete(int id) throws SQLException {
-        Connection conn = getConnection();
+        Connection conn = DBConnection.getConnection();
         PreparedStatement ps = null;
-        conn.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);
-        conn.setAutoCommit(false);
         try {
-            ps = conn.prepareStatement("DELETE FROM developers WHERE id = ?");
+            ps = conn.prepareStatement("DELETE FROM developer_skills WHERE developer_id = ?;");
+            ps.setInt(1, id);
+            ps.executeUpdate();
+            conn.commit();
+            ps = conn.prepareStatement("DELETE FROM developers WHERE id = ? ;");
             ps.setInt(1, id);
             ps.executeUpdate();
             conn.commit();
@@ -132,10 +110,8 @@ public class DeveloperDaoJdbc implements GeneralDAO<Developer> {
     }
 
     public void update(Developer dev) throws SQLException {
-        Connection conn = getConnection();
+        Connection conn = DBConnection.getConnection();
         PreparedStatement ps = null;
-        conn.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);
-        conn.setAutoCommit(false);
         try {
             ps = conn.prepareStatement("Update developers SET first_name = ?, last_name = ?," +
                     "specialty = ?, experience = ? , salary = ? WHERE developers.id = ?");
@@ -145,9 +121,7 @@ public class DeveloperDaoJdbc implements GeneralDAO<Developer> {
             ps.setInt(4, dev.getExperience());
             ps.setInt(5, dev.getSalary());
             ps.setInt(6, dev.getId());
-            int rowUpdated = ps.executeUpdate();
-            conn.commit();
-            System.out.println(rowUpdated);
+            ps.executeUpdate();
         } catch (SQLException e) {
             JdbcUtils.rollbackQuietly(conn);
             throw new RuntimeException(e);
@@ -193,18 +167,21 @@ public class DeveloperDaoJdbc implements GeneralDAO<Developer> {
         return dev;
     }
 
-    private void skillsForDev(Set<Skill> idSkills, Developer dev, Connection conn) throws SQLException {
+    private void skillsForDev(Developer dev, Connection conn) throws SQLException {
         PreparedStatement preparedStatement = null;
-        preparedStatement = conn.prepareStatement("0");
+        preparedStatement = conn.prepareStatement("INSERT INTO developer_skills (developer_id, skill_id) \n" +
+                "VALUES (?, ?);");
+        Set<Skill> idSkill = dev.getSkills();
+        Iterator iter = idSkill.iterator();
+        Skill skill = new Skill();
 
         try {
-            Iterator<Skill> iter = idSkills.iterator();
-            while (iter.hasNext()) {
-                Skill skill = iter.next();
+            while(iter.hasNext()){
+                skill = (Skill) iter.next();
                 preparedStatement.setInt(1, dev.getId());
-                preparedStatement.setInt(2, skill.getId());
+                preparedStatement.setInt(2, skill.getId() );
                 preparedStatement.executeUpdate();
-            }
+           }
 
         } catch (SQLException e) {
             JdbcUtils.rollbackQuietly(conn);
@@ -212,6 +189,7 @@ public class DeveloperDaoJdbc implements GeneralDAO<Developer> {
             JdbcUtils.closeQuietly(preparedStatement);
         }
     }
+
 }
 
 

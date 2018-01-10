@@ -11,10 +11,6 @@ public class Developer {
     private Set<Skill> skills;
     private int salary;
 
-    public Developer() {
-    }
-
-
     public int getId() {
         return id;
     }
