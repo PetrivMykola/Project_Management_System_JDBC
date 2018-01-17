@@ -1,4 +1,4 @@
-package net.petriv.jdbc;
+package net.petriv.jdbc.setting;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -7,9 +7,9 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
-public class  DBConnection {
+public class ConnectionFactoryJdbc implements ConnectionFactory {
 
-    public static Connection getConnection() {
+    public Connection newConnection() {
         Properties properties = new Properties();
         FileInputStream fis = null;
         Connection con = null;
@@ -33,4 +33,7 @@ public class  DBConnection {
         return con;
     }
 
+    public void close() throws SQLException {
+        //NOP
+    }
 }

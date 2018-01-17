@@ -5,7 +5,7 @@ import java.util.List;
 
 public interface GeneralDao<T> {
 
-    void save(T v) throws SQLException;
+    void save(T newEntity) throws SQLException;
 
     T getById(int id) throws SQLException;
 
@@ -13,6 +13,6 @@ public interface GeneralDao<T> {
 
     void delete(int id) throws SQLException;
 
-    void update (T v) throws SQLException;
+    void update (T Entity) throws SQLException;
 
 }

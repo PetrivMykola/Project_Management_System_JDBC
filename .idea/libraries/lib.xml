@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="lib">
+    <ANNOTATIONS>
+      <root url="jar://C:/java/proxool-0.9.1.zip!/proxool-0.9.1/lib" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://C:/java/proxool-0.9.1.zip!/proxool-0.9.1/lib" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://C:/java/proxool-0.9.1.zip!/proxool-0.9.1/lib" />
+    </JAVADOC>
+    <NATIVE>
+      <root url="jar://C:/java/proxool-0.9.1.zip!/proxool-0.9.1/lib" />
+    </NATIVE>
+    <SOURCES>
+      <root url="jar://C:/java/proxool-0.9.1.zip!/proxool-0.9.1/lib" />
+    </SOURCES>
+    <jarDirectory url="jar://C:/java/proxool-0.9.1.zip!/proxool-0.9.1/lib" recursive="false" />
+    <jarDirectory url="jar://C:/java/proxool-0.9.1.zip!/proxool-0.9.1/lib" recursive="false" type="SOURCES" />
+  </library>
+</component>

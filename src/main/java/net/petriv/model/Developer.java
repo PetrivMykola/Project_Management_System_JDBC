@@ -1,5 +1,6 @@
 package net.petriv.model;
 
+import java.util.List;
 import java.util.Set;
 
 public class Developer {
@@ -8,8 +9,29 @@ public class Developer {
     private String lastName;
     private String specialty;
     private int experience;
-    private Set<Skill> skills;
+    private List<Skill> skills;
     private int salary;
+    private List<Integer> skillsId;
+
+    public List<Integer> getSkillsId() {
+        return skillsId;
+    }
+
+    public void setSkillsId(List<Integer> skillsId) {
+        this.skillsId = skillsId;
+    }
+
+    public Developer() {
+    }
+
+    public Developer(int id, String firstName, String lastName, String specialty, int experience, int salary) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.specialty = specialty;
+        this.experience = experience;
+        this.salary = salary;
+    }
 
     public int getId() {
         return id;
@@ -43,11 +65,11 @@ public class Developer {
         this.specialty = specialty;
     }
 
-    public Set<Skill> getSkills() {
+    public List<Skill> getSkills() {
         return skills;
     }
 
-    public void setSkills(Set<Skill> skills) {
+    public void setSkills(List<Skill> skills) {
         this.skills = skills;
     }
 

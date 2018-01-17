@@ -1,21 +1,8 @@
-package net.petriv.jdbc;
+package net.petriv.jdbc.setting;
 
 import java.sql.*;
 
 public final class JdbcUtils {
-    private static boolean initialized;
-
-    public static synchronized void initDriver(String driverClass) {
-        if (!initialized) {
-            try {
-                Class.forName(driverClass);
-            } catch (ClassNotFoundException e) {
-                e.getCause();
-                throw new RuntimeException("Can't initialize driver" + driverClass);
-            }
-        }
-        initialized = true;
-    }
 
     public static void closeQuietly(ResultSet rs) {
         if (rs != null) {

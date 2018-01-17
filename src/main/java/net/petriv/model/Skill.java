@@ -1,14 +1,25 @@
 package net.petriv.model;
 
+import java.util.List;
+
 public class Skill {
     private int id;
     private String name;
+    List<Developer> developers;
 
     public Skill() { }
 
     public Skill(int id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    public List<Developer> getDevelopers() {
+        return developers;
+    }
+
+    public void setDevelopers(List<Developer> developers) {
+        this.developers = developers;
     }
 
     public int getId() {
