@@ -1,8 +1,9 @@
 package net.petriv.test;
 
-import net.petriv.dao.impl.DeveloperDaoImpl;
+import net.petriv.dao.DeveloperDaoImpl;
 import net.petriv.jdbc.setting.ConnectionFactoryFactory;
 import net.petriv.model.Developer;
+import net.petriv.model.Skill;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -10,32 +11,28 @@ import java.util.List;
 
 public class Test {
     public static void main(String[] args) throws SQLException {
-        ConnectionFactoryFactory.setType(ConnectionFactoryFactory.FactoryType.C3P0);
+        ConnectionFactoryFactory.setType(ConnectionFactoryFactory.FactoryType.JDBC);
 
         DeveloperDaoImpl dao = new DeveloperDaoImpl();
         Developer dev = new Developer();
-        List<Integer> list = new ArrayList<Integer>();
-        list.add(1);
-        list.add(2);
-        list.add(3);
+        List<Skill> skillList = new ArrayList<Skill>();
+        Skill skill = new Skill(1);
+        skillList.add(skill);
+
         dev.setId(5);
-        dev.setFirstName("Oleh");
-        dev.setLastName("Kupyna");
-        dev.setSpecialty("Plumber");
-        dev.setExperience(3);
-        dev.setSalary(2000);
-        dev.setSkillsId(list);
+        dev.setFirstName("Peter");
+        dev.setLastName("Brosnan");
+        dev.setSpecialty("Delphi");
+        dev.setExperience(1);
+        dev.setSalary(100);
+        dev.setSkills(skillList);
 
-        // dao.save(dev);
+       dao.save(dev);
 
-        System.out.println(dao.getById(5));
-        // dao.delete(5);
-        // dao.save(dev);
-        // dao.delete(5);
-        //dao.delete(1);
+        //System.out.println(dao.getAll());
         //dao.save(dev);
-        //System.out.println(dao.getById(3));
-        // System.out.println(dao.getAll());
+        //System.out.println(dao.getById(6));
+         System.out.println(dao.getAll());
 
 
         // ConnectionFactoryJdbc.getConnection();

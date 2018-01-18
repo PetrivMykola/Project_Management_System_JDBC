@@ -2,28 +2,15 @@ package net.petriv.model;
 
 import java.util.List;
 
-public class Skill {
+public class Project {
     private int id;
     private String name;
-    List<Developer> developers;
+    private List<Team> teams;
 
-    public Skill() { }
-
-    public Skill(int id) {
-        this.id = id;
-    }
-
-    public Skill(int id, String name) {
+    public Project(int id, String name, List<Team> teams) {
         this.id = id;
         this.name = name;
-    }
-
-    public List<Developer> getDevelopers() {
-        return developers;
-    }
-
-    public void setDevelopers(List<Developer> developers) {
-        this.developers = developers;
+        this.teams = teams;
     }
 
     public int getId() {
@@ -42,10 +29,20 @@ public class Skill {
         this.name = name;
     }
 
+    public List<Team> getTeams() {
+        return teams;
+    }
+
+    public void setTeams(List<Team> teams) {
+        this.teams = teams;
+    }
+
     @Override
     public String toString() {
-        return
+        return "Project{" +
                 "id=" + id +
-                        ", name='" + name + '\'';
+                ", name='" + name + '\'' +
+                ", teams=" + teams +
+                '}';
     }
 }

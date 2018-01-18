@@ -11,15 +11,6 @@ public class Developer {
     private int experience;
     private List<Skill> skills;
     private int salary;
-    private List<Integer> skillsId;
-
-    public List<Integer> getSkillsId() {
-        return skillsId;
-    }
-
-    public void setSkillsId(List<Integer> skillsId) {
-        this.skillsId = skillsId;
-    }
 
     public Developer() {
     }
