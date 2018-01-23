@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="c3p0-0.9.5.2-sources">
+    <CLASSES>
+      <root url="jar://C:/java/lib/c3p0-0.9.5.2.jar!/" />
+      <root url="jar://C:/java/lib/c3p0-oracle-thin-extras-0.9.5.2.jar!/" />
+      <root url="jar://C:/java/lib/mchange-commons-java-0.2.11.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://C:/java/lib/c3p0-0.9.5.2-sources.jar!/" />
+      <root url="jar://C:/java/lib/mchange-commons-java-0.2.11-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

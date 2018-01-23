@@ -13,6 +13,14 @@ public class Project {
         this.teams = teams;
     }
 
+    public Project(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public Project() {
+    }
+
     public int getId() {
         return id;
     }

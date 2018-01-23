@@ -13,6 +13,14 @@ public class Company {
         this.projects = projects;
     }
 
+    public Company(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public Company() {
+    }
+
     public int getId() {
         return id;
     }

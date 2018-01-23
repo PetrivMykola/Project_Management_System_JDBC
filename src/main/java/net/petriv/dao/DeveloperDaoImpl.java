@@ -1,6 +1,6 @@
 package net.petriv.dao;
 
-import net.petriv.jdbc.setting.ConnectionFactoryFactory;
+import net.petriv.jdbc.setting.ConnectionC3P0;
 import net.petriv.jdbc.setting.JdbcUtils;
 import net.petriv.model.Developer;
 import net.petriv.model.Skill;
@@ -12,18 +12,25 @@ public class DeveloperDaoImpl implements GeneralDao<Developer> {
 
     private final String SAVE_DEVELOPER = "INSERT INTO developers (id, first_name, last_name, specialty, experience, salary)\n" +
             "VALUES (?, ?, ?, ?, ?, ?);";
-    private final String GET_DEVELOPER_BY_ID = "SELECT * FROM developers WHERE ID = ?;";
+    private final String GET_DEVELOPER_BY_ID = "SELECT * FROM developers WHERE id = ?;";
     private final String GET_ALL = "SELECT * FROM developers;";
-    private final String DELETE_REFERANCE = "DELETE FROM developer_skills WHERE developer_id = ?;";
     private final String DELETE_ENTITY = "DELETE FROM developers WHERE id = ?;";
-    private final String JOIN_TABLE = "select skills.id, name from developers join developer_skills on ( ? = developer_skills.developer_id) join skills on (skills.id = developer_skills.skill_id) GROUP BY name;";
-    private final String UPDATE = "Update developers SET id = ?, first_name = ?, last_name = ?,\" +\n" +
-            "                    \"specialty = ?, experience = ? , salary = ? WHERE developers.id = ?;";
-    private final String RELETION = "INSERT INTO developer_skills (developer_id, skill_id) \n" +
+    private final String JOIN_TABLE = "SELECT skills.id, name FROM developers JOIN developers_skills ON " +
+            "( ? = developers_skills.developer_id) JOIN skills ON " +
+            "  (skills.id = developers_skills.skill_id) GROUP BY name;";
+    private final String UPDATE = "UPDATE developers SET id = ?, first_name = ?, \n" +
+            "     last_name = ?, specialty = ?, experience = ? , salary = ? \n" +
+            "     WHERE developers.id = ?;";
+    private final String RELETION = "INSERT INTO developers_skills (developer_id, skill_id) \n" +
             "VALUES (?, ?);";
 
     private static Connection getConnection() {
-        Connection connection = new ConnectionFactoryFactory().newConnectionFactory();
+        Connection connection = null;
+        try {
+            connection = ConnectionC3P0.newConnection();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         if (connection == null) {
             throw new IllegalStateException("problem with connection");
         }
@@ -31,19 +38,19 @@ public class DeveloperDaoImpl implements GeneralDao<Developer> {
     }
 
     public void save(Developer developer) throws SQLException {
-        Connection connection = getConnection();
+        Connection conn = getConnection();
         PreparedStatement ps = null;
         try {
-            ps = connection.prepareStatement(SAVE_DEVELOPER);
+            ps = conn.prepareStatement(SAVE_DEVELOPER);
             setDeveloperField(developer, ps);
-            saveRelations(developer, connection);
+            saveRelations(developer, conn);
 
         } catch (Exception e) {
-            JdbcUtils.rollbackQuietly(connection);
+            JdbcUtils.rollbackQuietly(conn);
             System.out.println(e);
         } finally {
             JdbcUtils.closeQuietly(ps);
-            JdbcUtils.closeQuietly(connection);
+            JdbcUtils.closeQuietly(conn);
         }
     }
 
@@ -58,8 +65,8 @@ public class DeveloperDaoImpl implements GeneralDao<Developer> {
             ps.setInt(1, id);
             rs = ps.executeQuery();
             if (rs.next()) {
-              developer = getDeveloperFromResultSet(rs);
-              developer.setSkills(selelectSkillsByDeveloperId(id, conn));
+                developer = getDeveloperFromResultSet(rs);
+                developer.setSkills(selelectSkillsByDeveloperId(id, conn));
             }
             return developer;
 
@@ -84,9 +91,9 @@ public class DeveloperDaoImpl implements GeneralDao<Developer> {
             rs = statement.executeQuery(GET_ALL);
 
             while (rs.next()) {
-            Developer developer = getDeveloperFromResultSet(rs);
-            developer.setSkills(selelectSkillsByDeveloperId(developer.getId(), conn));
-            list.add(developer);
+                Developer developer = getDeveloperFromResultSet(rs);
+                developer.setSkills(selelectSkillsByDeveloperId(developer.getId(), conn));
+                list.add(developer);
             }
 
         } catch (SQLException e) {
@@ -103,9 +110,6 @@ public class DeveloperDaoImpl implements GeneralDao<Developer> {
         Connection conn = getConnection();
         PreparedStatement ps = null;
         try {
-            ps = conn.prepareStatement(DELETE_REFERANCE);
-            ps.setInt(1, id);
-            ps.executeUpdate();
             ps = conn.prepareStatement(DELETE_ENTITY);
             ps.setInt(1, id);
             ps.executeUpdate();
@@ -193,7 +197,7 @@ public class DeveloperDaoImpl implements GeneralDao<Developer> {
         }
     }
 
-    private Developer getDeveloperFromResultSet (ResultSet rs) throws SQLException {
+    private Developer getDeveloperFromResultSet(ResultSet rs) throws SQLException {
         int id = rs.getInt("id");
         String firstName = rs.getString("first_name");
         String lastName = rs.getString("last_name");
@@ -202,6 +206,7 @@ public class DeveloperDaoImpl implements GeneralDao<Developer> {
         int salary = rs.getInt("salary");
         return new Developer(id, firstName, lastName, specialty, experience, salary);
     }
+
 }
 
 

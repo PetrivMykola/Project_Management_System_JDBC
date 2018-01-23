@@ -4,9 +4,7 @@
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.44/mysql-connector-java-5.1.44.jar!/" />
     </CLASSES>
-    <JAVADOC>
-      <root url="jar://C:/java/commons-dbcp2-2.2.0-bin.zip!/commons-dbcp2-2.2.0/apidocs" />
-    </JAVADOC>
+    <JAVADOC />
     <SOURCES />
   </library>
 </component>

@@ -15,6 +15,16 @@ public class Developer {
     public Developer() {
     }
 
+    public Developer(int id, String firstName, String lastName, String specialty, int experience, int salary, List<Skill> skills) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.specialty = specialty;
+        this.experience = experience;
+        this.salary = salary;
+        this.skills = skills;
+    }
+
     public Developer(int id, String firstName, String lastName, String specialty, int experience, int salary) {
         this.id = id;
         this.firstName = firstName;

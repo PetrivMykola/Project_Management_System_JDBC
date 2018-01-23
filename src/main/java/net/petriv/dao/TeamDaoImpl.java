@@ -3,29 +3,31 @@ package net.petriv.dao;
 import net.petriv.jdbc.setting.ConnectionC3P0;
 import net.petriv.jdbc.setting.JdbcUtils;
 import net.petriv.model.Developer;
-import net.petriv.model.Skill;
+import net.petriv.model.Team;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class SkillDaoImpl implements GeneralDao<Skill> {
+public class TeamDaoImpl implements GeneralDao<Team> {
 
-    private final String SAVE_SKILL = "INSERT INTO skills (id, name)\n" +
+
+    private final String SAVE_TEAM = "INSERT INTO teams (id, name)\n" +
             "VALUES (?, ?);";
-    private final String GET_SKILL_BY_ID = "SELECT * FROM skills WHERE ID = ?;";
-    private final String GET_ALL = "SELECT * FROM skills;";
-    private final String DELETE_ENTITY = "DELETE FROM developers WHERE id = ?;";
-    private final String JOIN = "SELECT developers.id, developers.first_name,\n" +
+    private final String GET_TEAM_BY_ID = "SELECT * FROM teams WHERE ID = ?;";
+    private final String GET_ALL = "SELECT * FROM teams;";
+    private final String DELETE_ENTITY = "DELETE FROM teams WHERE id = ?;";
+    private final String JOIN = "\n" +
+            "      SELECT developers.id, developers.first_name,\n" +
             "     developers.last_name, developers.specialty,\n" +
-            "     developers.experience, developers.salary FROM skills\n" +
-            "     JOIN developers_skills ON\n" +
-            "     ( ? = developers_skills.skill_id)\n" +
-            "     JOIN developers ON (developers.id = developers_skills.developer_id)\n" +
+            "     developers.experience, developers.salary FROM teams\n" +
+            "     JOIN teams_developers ON\n" +
+            "     ( ? = teams_developers.team_id)\n" +
+            "     JOIN developers on (developers.id = teams_developers.developer_id)\n" +
             "     GROUP BY first_name;";
-    private final String UPDATE = "UPDATE skills SET name = ?  WHERE skills.id = ?;";
-    private final String RELETION = "INSERT INTO developers_skills (developer_id, skill_id) \n" +
+    private final String UPDATE = "UPDATE teams SET name = ?  WHERE teams.id = ?;";
+    private final String RELETION = "INSERT INTO teams_developers (team_id, developer_id) \n" +
             "VALUES (?, ?);";
 
     private static Connection getConnection() {
@@ -41,13 +43,14 @@ public class SkillDaoImpl implements GeneralDao<Skill> {
         return connection;
     }
 
-    public void save(Skill skill) throws SQLException {
+    public void save(Team team) throws SQLException {
         Connection connection = getConnection();
         PreparedStatement ps = null;
         try {
-            ps = connection.prepareStatement(SAVE_SKILL);
-            setSkillField(skill, ps);
-            saveRelations(skill, connection);
+            ps = connection.prepareStatement(SAVE_TEAM);
+            setTeamFields(team, ps);
+            saveRelations(team, connection);
+
         } catch (Exception e) {
             JdbcUtils.rollbackQuietly(connection);
             System.out.println(e);
@@ -55,24 +58,23 @@ public class SkillDaoImpl implements GeneralDao<Skill> {
             JdbcUtils.closeQuietly(ps);
             JdbcUtils.closeQuietly(connection);
         }
-
     }
 
-    public Skill getById(int id) throws SQLException {
+    public Team getById(int id) throws SQLException {
         Connection conn = getConnection();
         PreparedStatement ps = null;
         ResultSet rs = null;
-        Skill skill = null;
+        Team team = null;
 
         try {
-            ps = conn.prepareStatement(GET_SKILL_BY_ID);
+            ps = conn.prepareStatement(GET_TEAM_BY_ID);
             ps.setInt(1, id);
             rs = ps.executeQuery();
             if (rs.next()) {
-                skill = getSkillFromResultSet(rs);
-                skill.setDevelopers(selelectDevelopersBySkillId(skill.getId(), conn));
+                team = getTeamFromResultSet(rs);
+                team.setDevelopers(selectDevelopersByTeamId(id, conn));
             }
-            return skill;
+            return team;
 
         } catch (SQLException e) {
             JdbcUtils.rollbackQuietly(conn);
@@ -84,19 +86,20 @@ public class SkillDaoImpl implements GeneralDao<Skill> {
         }
     }
 
-    public List<Skill> getAll() throws SQLException {
+    public List<Team> getAll() throws SQLException {
         Connection conn = getConnection();
         Statement statement = null;
         ResultSet rs = null;
-        List<Skill> list = new ArrayList<Skill>();
+        List<Team> list = new ArrayList<Team>();
+
         try {
             statement = conn.createStatement();
             rs = statement.executeQuery(GET_ALL);
 
             while (rs.next()) {
-                Skill skill = getSkillFromResultSet(rs);
-                skill.setDevelopers(selelectDevelopersBySkillId(skill.getId(), conn));
-                list.add(skill);
+                Team team = getTeamFromResultSet(rs);
+                team.setDevelopers(selectDevelopersByTeamId(team.getId(), conn));
+                list.add(team);
             }
 
         } catch (SQLException e) {
@@ -125,13 +128,13 @@ public class SkillDaoImpl implements GeneralDao<Skill> {
         }
     }
 
-    public void update(Skill skill) throws SQLException {
+    public void update(Team team) throws SQLException {
         Connection conn = getConnection();
         PreparedStatement ps = null;
         try {
             ps = conn.prepareStatement(UPDATE);
-            setSkillField(skill, ps);
-            selelectDevelopersBySkillId(skill.getId(), conn);
+            setTeamFields(team, ps);
+            selectDevelopersByTeamId(team.getId(), conn);
 
         } catch (SQLException e) {
             JdbcUtils.rollbackQuietly(conn);
@@ -144,13 +147,13 @@ public class SkillDaoImpl implements GeneralDao<Skill> {
 
     }
 
-    private List<Developer> selelectDevelopersBySkillId(int skillId, Connection conn) {
+    private List<Developer> selectDevelopersByTeamId(int teamId, Connection conn) {
         List<Developer> list = new ArrayList<Developer>();
         ResultSet rs = null;
         PreparedStatement ps = null;
         try {
             ps = conn.prepareStatement(JOIN);
-            ps.setInt(1, skillId);
+            ps.setInt(1, teamId);
             rs = ps.executeQuery();
             while (rs.next()) {
                 Developer developer = new Developer();
@@ -158,7 +161,7 @@ public class SkillDaoImpl implements GeneralDao<Skill> {
                 developer.setFirstName(rs.getString("first_name"));
                 developer.setLastName(rs.getString("last_name"));
                 developer.setSpecialty(rs.getString("specialty"));
-                developer.setExperience(rs.getInt("experience"));
+                developer.setExperience(rs.getInt("experiance"));
                 developer.setSalary(rs.getInt("salary"));
                 list.add(developer);
             }
@@ -172,25 +175,25 @@ public class SkillDaoImpl implements GeneralDao<Skill> {
         return list;
     }
 
-    private Skill setSkillField(Skill skill, PreparedStatement ps) {
+    private Team setTeamFields(Team team, PreparedStatement ps) {
         try {
-            ps.setInt(1, skill.getId());
-            ps.setString(2, skill.getName());
+            ps.setInt(1, team.getId());
+            ps.setString(2, team.getName());
             ps.executeUpdate();
         } catch (SQLException e) {
             e.getErrorCode();
         }
-        return skill;
+        return team;
     }
 
-    private void saveRelations(Skill skill, Connection conn) {
-        Iterator<Developer> iterator = skill.getDevelopers().iterator();
+    private void saveRelations(Team team, Connection conn) {
+        Iterator<Developer> iterator = team.getDevelopers().iterator();
         PreparedStatement ps = null;
         try {
             ps = conn.prepareStatement(RELETION);
             while (iterator.hasNext()) {
-                ps.setInt(1, iterator.next().getId());
-                ps.setInt(2, skill.getId());
+                ps.setInt(1, team.getId());
+                ps.setInt(2, iterator.next().getId());
                 ps.executeUpdate();
             }
         } catch (SQLException e) {
@@ -200,9 +203,9 @@ public class SkillDaoImpl implements GeneralDao<Skill> {
         }
     }
 
-    private Skill getSkillFromResultSet(ResultSet rs) throws SQLException {
+    private Team getTeamFromResultSet(ResultSet rs) throws SQLException {
         int id = rs.getInt("id");
         String name = rs.getString("name");
-        return new Skill(id, name);
+        return new Team(id, name);
     }
 }
